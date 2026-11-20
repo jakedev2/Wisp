@@ -90,7 +90,7 @@ jobs:
           Get-Content SHA256SUMS.txt
 
       - name: Publish the GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           body: |
             **Windows:** `Wisp-${{ env.VERSION }}-setup.exe` (installer) or `Wisp-${{ env.VERSION }}-windows-x64.exe` (portable). Existing installs update themselves.
@@ -119,6 +119,6 @@ jobs:
           export WISP_VERSION="${GITHUB_REF_NAME#v}"
           bash ios/build-ipa.sh
       - name: Attach it to the release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: ios/target/ipa/*.ipa
