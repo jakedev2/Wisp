@@ -22,7 +22,7 @@ dirs = "5"
 url = "2"
 rfd = "0.15"
 ureq = "2"
-sha2 = "0.10"
+sha2 = "0.11"
 rusqlite = { version = "0.32", features = ["bundled"] }
 zip = { version = "2", default-features = false, features = ["deflate"] }
 keyring = { version = "3", features = ["windows-native"] }
